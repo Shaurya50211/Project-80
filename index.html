@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Build Paragraphs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<h1>Make Paragraphs by typing in the Text Boxes!</h1>
+
+<body>
+    <div style="float: left;">
+        <h4>
+            <span>1. </span>
+            <input type="text" id="div1_input_box_1" placeholder="Input box 1">
+            <br><br>
+            <span>2. </span>
+            <input type="text" id="div1_input_box_2" placeholder="Input box 2">
+            <br><br>
+            <span>3. </span>
+            <input type="text" id="div1_input_box_3" placeholder="Input box 3">
+            <br><br>
+            <span>4. </span>
+            <input type="text" id="div1_input_box_4" placeholder="Input box 4">
+            <br><br>
+            <span>5. </span>
+            <input type="text" id="div1_input_box_5" placeholder="Input box 5">
+            <br><br>
+            <span>6. </span>
+            <input type="text" id="div1_input_box_6" placeholder="Input box 6">
+        </h4>
+        <button onclick="getParagraph1()">Get paragraph 1</button>
+    </div>
+
+    <div style="float: right;">
+        <h4>
+            <span>1. </span>
+            <input type="text" id="div2_input_box_1" placeholder="Input box 1">
+            <br><br>
+            <span>2. </span>
+            <input type="text" id="div2_input_box_2" placeholder="Input box 2">
+            <br><br>
+            <span>3. </span>
+            <input type="text" id="div2_input_box_3" placeholder="Input box 3">
+            <br><br>
+            <span>4. </span>
+            <input type="text" id="div2_input_box_4" placeholder="Input box 4">
+            <br><br>
+            <span>5. </span>
+            <input type="text" id="div2_input_box_5" placeholder="Input box 5">
+            <br><br>
+            <span>6. </span>
+            <input type="text" id="div2_input_box_6" placeholder="Input box 6">
+        </h4>
+        <button onclick="getParagraph2()">Get paragraph 2</button>
+    </div>
+
+    </center>
+    <br>
+
+    <p id="showParagraph1"></p>
+    <p id="showParagraph2"></p>
+</body>
+
+</html>
+
+<style>
+    html {
+        text-align: center;
+        background-color: greenyellow;
+    }
+
+    h1 {
+        font-family: 'Satisfy', cursive;
+        color: rgb(39, 108, 197);
+        text-align: center;
+    }
+
+    div {
+        margin: 10px;
+        width: 48%;
+    }
+
+    #showParagraph1,
+    #showParagraph2 {
+        width: 100%;
+        margin: 10px;
+        font-family: 'Patrick Hand', cursive;
+    }
+
+    h4 {
+        font-family: 'Patrick Hand', cursive;
+    }
+</style>
+
+
+
+<script>
+    function getParagraph1() {
+        var inputs = [];
+        for (var i = 1; i <= 6; i++) {
+            inputs.push(document.getElementById("div1_input_box_" + i).value);
+        }
+        document.getElementById("showParagraph1").innerHTML = inputs.join(". ");
+    }
+
+    function getParagraph2() {
+        var inputs = [];
+        for (var i = 1; i <= 6; i++) {
+            inputs.push(document.getElementById("div2_input_box_" + i).value);
+        }
+        document.getElementById("showParagraph2").innerHTML = inputs.join(". ");
+    }
+</script>
